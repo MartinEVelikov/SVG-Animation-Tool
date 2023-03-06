@@ -15,7 +15,7 @@ index.html
 login.html
 register.html
 userguide_svg_animation_tool_v_2.pdf
-81670_81696_Документация-SVG_v_2.docx
+Документация-SVG_v_2.docx
 ---------------------
 За стартиране на проекта Ви е необходим XAMPP!
 1. Стартирате XAMPP - Кликвате върху Start бутона за Apache и за MySQL.
