@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.button {
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(0, 200, 100);
+    padding: 15px 40px;
+}
+
+#mainFrame { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.95);
+    height: calc(100vh - 92px);
+}
+
+#svgHolder {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    border-right: 1px solid;
+    overflow-x: hidden;
+}
+
+h2 {
+    padding: 15px 0;
+}
+
+.svgDiv {
+    border-bottom: 1px solid black;
+    padding: 15px;
+    cursor: pointer;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svgDiv:hover,
+.svgDiv.active {
+    box-shadow: inset 0 0 30px 15px #28e7fd;
+}
+
+#svgHolder svg {
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+}
+
+#svgTree {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    border-right: 1px solid;
+}
+
+#treeContent {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.svgTag {
+    position: relative;
+    padding: 3px;
+    background-color: #ccc;
+    margin: 2px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.svgTag:hover,
+.svgTag.active {
+    outline: 5px solid #28e7fd;
+    z-index: 1;
+}
+
+#animatePanel {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    border-right: 1px solid;
+}
+
+#animatePanel.disabled,
+#animatePanel.disabled input,
+#animatePanel.disabled #render {
+    color: #888;
+    pointer-events: none;
+}
+
+.attribute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.attribute b {
+    width: 25%;
+}
+
+.attribute input {
+    width: 25%;
+    padding: 5px;
+}
+
+.attribute select {
+    padding: 5px;
+}
+
+#animationPreview {
+    position: relative;
+    width: calc(100vw - 3 * 300px);
+    overflow: hidden;
+}
+
+#svgPanel {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 10%;
+    top: 25%;
+    display: flex;
+}
+
+#svgPanel svg {
+    width: 100%;
+    height: 100%;
+}
+
+#hoverDiv {
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.25);
+    z-index: 1;
+}
+
+#render {
+    padding: 15px;
+}
+
+/* modal */
+#showModal {
+    border: 0;
+    margin: 10px;
+}
+
+#closeModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 32px;
+    color: #333;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+#modal-addSvg {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    color: black;
+    padding: 15px;
+    display: none;
+    z-index: 2;
+}
+
+#modal-addSvg > * {
+    z-index: 1;
+}
+
+#modal-addSvg::before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+#modal-addSvg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 0;
+}
+
+#modal-addSvg #svgContent {
+    width: 100%;
+    height: 70%;
+}
+
+.submitSvg {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+#save {
+    margin: 10px 0;
+}
+
+#fileToLoad {
+    font-size: 0.9em;
+    margin: 10px 0;
+}

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Регистрация на нов потребител</title>
+        <script src="./scripts/register.js" defer></script>
+        <link href="./styles/register.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="./img/svg_tool.svg"></a>
+            </div>
+            <div class="box">                
+                <p>
+                    <a href="login.html"><button class="glow-on-hover" type="submit">Вход</button></a>
+                </p>
+            </div>
+            <div class="box">
+                <p>
+                    <a href="register.html"><button class="glow-on-hover" type="submit">Регистрация</button></a>
+                </p>
+            </div>
+        </div>
+        
+
+        <div id="register-container">
+            <h1>Регистрация</h1>
+            <form>
+                <input type="email"
+                       placeholder="Въведете имейл"
+                       name="email"
+                       class="user-inputs"
+                       />
+                
+                <input type="password"
+                       placeholder="Въведете парола"
+                       name="password"
+                       class="user-inputs"
+                       />
+                
+                <input type="password"
+                       placeholder="Повторете паролата"
+                       name="password-again"
+                       class="user-inputs"
+                       />
+
+                <input type="submit" id="submitbtn" value="Регистрирай ме" />
+
+            </form>
+            
+            <div id="error-message"></div>
+            <div id="success-message"></div>
+        </div>
+
+    </body>
+</html>

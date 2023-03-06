@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Влизане в системата</title>
+        <script src="./scripts/login.js" defer></script>
+        <link href="./styles/login.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="./img/svg_tool.svg"></a>
+            </div>
+            <div class="box">                
+                <p>
+                    <a href="login.html"><button class="glow-on-hover" type="submit">Вход</button></a>
+                </p>
+            </div>
+            <div class="box">
+                <p>
+                    <a href="register.html"><button class="glow-on-hover" type="submit">Регистрация</button></a>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Влизане в системата</h1> 
+            <form method="POST" id="registration">
+        <input type="email" name="email" id="email" placeholder="Имейл адрес"/>
+        <input type="password" name="password" id="password" placeholder="Парола" />
+        <input type="button" id="login-button" value="Влез" />              
+            </form>
+        </div> 
+    </body>
+</html>

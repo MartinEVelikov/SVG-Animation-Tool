@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Начална страница</title>
+    <link href="./styles/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+</head>
+
+<body>
+    <div class="header not-logged">
+        <div class="logo">
+            <a href="index.html"><img src="./img/svg_tool.svg"></a>
+        </div>
+        <div class="box">
+            <p>
+                <a href="login.html"><button class="glow-on-hover" type="submit">Вход</button></a>
+            </p>
+        </div>
+        <div class="box">
+            <p>
+                <a href="register.html"><button class="glow-on-hover" type="submit">Регистрация</button></a>
+            </p>
+        </div>
+    </div>
+    <div class="not-logged indexAnimations">
+        <img src="./img/svg_tool_animated.svg" alt="">
+        <img src="./img/car_wheel_animated.svg" alt="">
+    </div>
+    <div class="header logged">
+        <div class="logo">
+            <a href="index.html"><img src="./img/svg_tool.svg"></a>
+        </div>
+        <div class="box">
+            <!-- <input type="button" id="logout-button" value="Излез!" /> -->
+            <button class="glow-on-hover" id="logout-button" type="submit">Излез</button>
+        </div>
+    </div>
+    <div class="logged">
+        <div id="mainFrame" >
+            <div id="svgHolder">
+                <h2>SVGs</h2>
+                <button id="showModal" class="button">Add new Svg</button>
+                <div id="svgs"></div>
+            </div>
+            <div id="svgTree">
+                <h2>SVG Tree</h2>
+                <div id="treeContent"></div>
+            </div>
+            <div id="animatePanel" class="disabled">
+                <h2>Animate</h2>
+                <div class="attribute">
+                    <b>X: </b>
+                    <input type="text" id="xFrom" placeholder="from">
+                    <input type="text" id="xTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>Y: </b>
+                    <input type="text" id="yFrom" placeholder="from">
+                    <input type="text" id="yTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>Opacity: </b>
+                    <input type="text" id="opacityFrom" placeholder="from">
+                    <input type="text" id="opacityTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>Rotate: </b>
+                    <input type="text" id="rotateFrom" placeholder="from">
+                    <input type="text" id="rotateTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>Scale: </b>
+                    <input type="text" id="scaleFrom" placeholder="from">
+                    <input type="text" id="scaleTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>stroke-dasharay: </b>
+                    <input type="text" id="dashArrayFrom" placeholder="from">
+                    <input type="text" id="dashArrayTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>stroke-dashoffset: </b>
+                    <input type="text" id="dashOffsetFrom" placeholder="from">
+                    <input type="text" id="dashOffsetTo" placeholder="to">
+                </div>
+                <div class="attribute">
+                    <b>Ease: </b>
+                    <select name="ease" id="ease">
+                        <option value="ease-in">ease-in</option>
+                        <option value="ease-out">ease-out</option>
+                        <option value="ease-in-out">ease-in-out</option>
+                        <option value="linear">linear</option>
+                    </select>
+                </div>
+                <div class="attribute">
+                    <b>Duration: </b>
+                    <input type="text" id="duration" placeholder="duration">
+                </div>
+                <div class="attribute">
+                    <b>Delay: </b>
+                    <input type="text" id="delay" placeholder="delay">
+                </div>
+                <div class="attribute">
+                    <b>Repeat: </b>
+                    <input type="text" id="repeat" placeholder="repeat">
+                </div>
+
+                <div id="render" class="button">Run Animation</div>
+                <div id="save" class="button">Save animation</div>
+                <div id="download" class="button">Download animation</div>
+            </div>
+
+            <div id="animationPreview">
+                <div id="svgPanel"></div>
+            </div>
+            <div id="hoverDiv"></div>
+        </div>
+
+        <div id="modal-addSvg">
+            <h2>Add new svg</h2>
+            <textarea cols="30" rows="10" id="svgContent" placeholder="SVG Text goes here"></textarea>
+            <input type="file" id="fileToLoad">
+            <button class="submitSvg button">Add</button>
+            <button id="closeModal">X</button>
+        </div>
+    </div>
+</body>
+
+</html>
